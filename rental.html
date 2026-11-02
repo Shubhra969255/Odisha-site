@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vehicle Rental — Travel & Rent Odisha</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="contact-strip">
+      <a href="tel:+916962551917">📞 +91 69625 51917</a>
+      <a href="mailto:info@travelrentodisha.com">✉ info@travelrentodisha.com</a>
+    </div>
+    <div>
+      <label for="lang-selector">Language</label>
+      <select id="lang-selector" onchange="changeLanguage(this.value)">
+        <option value="en">English</option>
+        <option value="hi">हिन्दी</option>
+        <option value="od">ଓଡ଼ିଆ</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="mark">Travel &amp; Rent Odisha</span>
+      <span class="tag">Vehicles · Tours · Local Craft</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" onclick="toggleNav()" aria-label="Toggle menu">☰</button>
+    <div class="nav-wrap" id="navWrap">
+      <nav class="main">
+        <a href="index.html">Home</a>
+        <a href="rental.html" aria-current="page">Vehicle Rental</a>
+        <a href="places.html">Tour Places</a>
+        <a href="packages.html">Tour Packages</a>
+        <a href="yatri.html">Odisha Yatri</a>
+        <a href="souvenirs.html">Souvenirs</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://www.google.com/maps/search/Odisha" target="_blank" rel="noopener">Location</a>
+      </nav>
+      <a class="cart-link" href="souvenirs.html">🛍 Cart<span class="cart-badge">0</span></a>
+    </div>
+  </div>
+</header>
+
+<div class="page-banner" style="--banner-img:url('https://imgd.aeplcdn.com/642x336/n/cw/ec/103183/raider-125-right-side-view-20.png')">
+  <div class="wrap">
+    <h1 data-en="Vehicle Rental Fleet" data-hi="वाहन किराया बेड़ा" data-od="ଯାନ ଭଡା ବାହିନୀ">Vehicle Rental Fleet</h1>
+    <p data-en="Prices shown are per day. Self-drive and with-driver options available on every vehicle." data-hi="दिखाई गई कीमतें प्रति दिन हैं। हर वाहन पर सेल्फ-ड्राइव और ड्राइवर सहित विकल्प उपलब्ध हैं।" data-od="ଦେଖାଯାଇଥିବା ମୂଲ୍ୟ ପ୍ରତିଦିନ ପାଇଁ। ପ୍ରତ୍ୟେକ ଯାନରେ ସ୍ୱୟଂ-ଡ୍ରାଇଭ୍ ଏବଂ ଡ୍ରାଇଭର୍ ସହିତ ବିକଳ୍ପ ଉପଲବ୍ଧ।">Prices shown are per day. Self-drive and with-driver options available on every vehicle.</p>
+  </div>
+</div>
+
+<main id="main">
+  <section>
+    <div class="wrap">
+
+      <div class="panel">
+        <h2 data-en="Estimate Your Rental Cost" data-hi="अपनी किराया लागत का अनुमान लगाएं" data-od="ଆପଣଙ୍କ ଭଡା ମୂଲ୍ୟ ଆକଳନ କରନ୍ତୁ">Estimate Your Rental Cost</h2>
+        <p data-en="Pick a vehicle type and number of days for a quick estimate — final price may vary with route and season." data-hi="त्वरित अनुमान के लिए एक वाहन प्रकार और दिनों की संख्या चुनें।" data-od="ଶୀଘ୍ର ଆକଳନ ପାଇଁ ଏକ ଯାନ ପ୍ରକାର ଏବଂ ଦିନ ସଂଖ୍ୟା ବାଛନ୍ତୁ।">Pick a vehicle type and number of days for a quick estimate — final price may vary with route and season.</p>
+        <div class="input-row">
+          <label for="calcVehicle" data-en="Vehicle" data-hi="वाहन" data-od="ଯାନ">Vehicle</label>
+          <select id="calcVehicle">
+            <option value="500">Scooters &amp; Mopeds — ₹500/day</option>
+            <option value="800">Motorcycles (150cc+) — ₹800/day</option>
+            <option value="1200">Cruiser Bikes — ₹1,200/day</option>
+            <option value="1800" selected>Compact Sedan — ₹1,800/day</option>
+            <option value="2200">MUV (Innova/Ertiga) — ₹2,200/day</option>
+            <option value="2800">SUV / Jeep — ₹2,800/day</option>
+            <option value="4000">Tempo Traveller — ₹4,000/day</option>
+            <option value="4500">Premium &amp; Luxury — ₹4,500/day</option>
+          </select>
+          <label for="calcDays" data-en="Days" data-hi="दिन" data-od="ଦିନ">Days</label>
+          <input type="number" id="calcDays" min="1" value="3" style="width:80px;">
+          <button onclick="calcRental()" data-en="Calculate" data-hi="गणना करें" data-od="ଗଣନା କରନ୍ତୁ">Calculate</button>
+        </div>
+        <div class="calc-result" id="calcResult"></div>
+      </div>
+
+      <h3 class="subhead" data-en="Cars (Self-Drive & Driver)" data-hi="कारें (सेल्फ-ड्राइव और ड्राइवर)" data-od="କାର୍ (ସ୍ୱୟଂ-ଡ୍ରାଇଭ୍ ଏବଂ ଡ୍ରାଇଭର୍)">Cars (Self-Drive & Driver)</h3>
+      <div class="grid three">
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcsOHlhu767-Cco_4h09vqI6tsM60UxbvO4A&s" alt="Compact sedan">
+          <div class="body">
+            <h4 data-en="Compact Sedans" data-hi="कॉम्पैक्ट सेडान" data-od="କମ୍ପାକ୍ଟ ସେଡାନ୍">Compact Sedans</h4>
+            <p data-en="Ideal for city tours and small families." data-hi="शहर भ्रमण और छोटे परिवारों के लिए आदर्श।" data-od="ସହର ଭ୍ରମଣ ଏବଂ ଛୋଟ ପରିବାର ପାଇଁ ଆଦର୍ଶ।">Ideal for city tours and small families.</p>
+            <span class="price" data-en="₹1,800 / day" data-hi="₹1,800 / दिन" data-od="₹1,800 / ଦିନ">₹1,800 / day</span>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs_S3wNY448zBJASaO5s8SvhtnLn0JDSV0Bw&s" alt="SUV">
+          <div class="body">
+            <h4 data-en="SUVs / Jeeps" data-hi="एसयूवी / जीप" data-od="ଏସ୍‌ୟୁଭି / ଜିପ୍">SUVs / Jeeps</h4>
+            <p data-en="Robust vehicles for hilly terrain like Daringbadi." data-hi="दारिंगबाड़ी जैसे पहाड़ी इलाकों के लिए मजबूत वाहन।" data-od="ଦାରିଙ୍ଗବାଡି ପରି ପାହାଡିଆ ଅଞ୍ଚଳ ପାଇଁ ଶକ୍ତିଶାଳୀ ଯାନ।">Robust vehicles for hilly terrain like Daringbadi.</p>
+            <span class="price" data-en="₹2,800 / day" data-hi="₹2,800 / दिन" data-od="₹2,800 / ଦିନ">₹2,800 / day</span>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://www.edmunds.com/assets/m/cs/cms/5affedfb-01c2-59b8-97fa-86e4e1429357/2025_porsche_911_gts_action_1_1600.jpg" alt="Luxury car">
+          <div class="body">
+            <h4 data-en="Premium & Luxury" data-hi="प्रीमियम और लक्जरी" data-od="ପ୍ରିମିୟମ୍ ଏବଂ ଲକ୍ଜୁରୀ">Premium & Luxury</h4>
+            <p data-en="Travel in style and comfort for special occasions." data-hi="विशेष अवसरों के लिए शैली और आराम से यात्रा करें।" data-od="ବିଶେଷ ଉତ୍ସବ ପାଇଁ ଶୈଳୀ ଏବଂ ଆରାମରେ ଭ୍ରମଣ କରନ୍ତୁ।">Travel in style and comfort for special occasions.</p>
+            <span class="price" data-en="₹4,500 / day" data-hi="₹4,500 / दिन" data-od="₹4,500 / ଦିନ">₹4,500 / day</span>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="subhead" data-en="Bikes & Scooters" data-hi="बाइक और स्कूटर" data-od="ବାଇକ୍ ଏବଂ ସ୍କୁଟର୍">Bikes & Scooters</h3>
+      <div class="grid three">
+        <div class="card">
+          <img src="https://imgd.aeplcdn.com/642x336/n/cw/ec/103183/raider-125-right-side-view-20.png?isig=0&q=80" alt="Motorcycle">
+          <div class="body">
+            <h4 data-en="Motorcycles (150cc+)" data-hi="मोटरसाइकिल (150cc+)" data-od="ମୋଟରସାଇକେଲ୍ (150cc+)">Motorcycles (150cc+)</h4>
+            <p data-en="For adventure road trips across Odisha." data-hi="ओडिशा भर में साहसिक सड़क यात्राओं के लिए।" data-od="ଓଡିଶା ସାରା ଦୁଃସାହସିକ ସଡ଼କ ଯାତ୍ରା ପାଇଁ।">For adventure road trips across Odisha.</p>
+            <span class="price" data-en="₹800 / day" data-hi="₹800 / दिन" data-od="₹800 / ଦିନ">₹800 / day</span>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://www.rideriver.com/_next/image?url=%2Fimages%2Fproduct%2Findie-red-front.webp&w=3840&q=75" alt="Scooter">
+          <div class="body">
+            <h4 data-en="Scooters & Mopeds" data-hi="स्कूटर और मोपेड" data-od="ସ୍କୁଟର୍ ଏବଂ ମୋପେଡ୍">Scooters & Mopeds</h4>
+            <p data-en="Easy transport for local sightseeing." data-hi="स्थानीय दर्शनीय स्थलों की यात्रा के लिए आसान परिवहन।" data-od="ସ୍ଥାନୀୟ ଦର୍ଶନୀୟ ସ୍ଥାନ ପାଇଁ ସହଜ ପରିବହନ।">Easy transport for local sightseeing.</p>
+            <span class="price" data-en="₹500 / day" data-hi="₹500 / दिन" data-od="₹500 / ଦିନ">₹500 / day</span>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqtQ80sDggIqRvV91QPK6e8U9spdy6DHnXtw&s" alt="Cruiser bike">
+          <div class="body">
+            <h4 data-en="Cruiser Bikes" data-hi="क्रूजर बाइक" data-od="କ୍ରୁଜର୍ ବାଇକ୍">Cruiser Bikes</h4>
+            <p data-en="Comfortable rides for long coastal stretches." data-hi="लंबे तटीय हिस्सों के लिए आरामदायक सवारी।" data-od="ଲମ୍ବା ଉପକୂଳ ବିସ୍ତାର ପାଇଁ ଆରାମଦାୟକ ରାଇଡ୍।">Comfortable rides for long coastal stretches.</p>
+            <span class="price" data-en="₹1,200 / day" data-hi="₹1,200 / दिन" data-od="₹1,200 / ଦିନ">₹1,200 / day</span>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="subhead" data-en="Vans / MUVs / Tempo Travellers" data-hi="वैन / एमयूवी / टेम्पो ट्रैवलर" data-od="ଭ୍ୟାନ୍ / ଏମ୍‌ୟୁଭି / ଟେମ୍ପୋ ଟ୍ରାଭେଲର୍">Vans / MUVs / Tempo Travellers</h3>
+      <div class="grid three">
+        <div class="card">
+          <img src="https://i.pinimg.com/736x/b1/e7/f2/b1e7f2a20b2a899b6b83e4b419d7a981.jpg" alt="Tempo traveller">
+          <div class="body">
+            <h4 data-en="Tempo Travellers (12+ Seats)" data-hi="टेम्पो ट्रैवलर (12+ सीटें)" data-od="ଟେମ୍ପୋ ଟ୍ରାଭେଲର୍ (12+ ଆସନ)">Tempo Travellers (12+ Seats)</h4>
+            <p data-en="Perfect for large groups and pilgrimages." data-hi="बड़े समूहों और तीर्थयात्राओं के लिए उत्तम।" data-od="ବଡ ଗୋଷ୍ଠୀ ଏବଂ ତୀର୍ଥଯାତ୍ରା ପାଇଁ ଉପଯୁକ୍ତ।">Perfect for large groups and pilgrimages.</p>
+            <span class="price" data-en="₹4,000 / day" data-hi="₹4,000 / दिन" data-od="₹4,000 / ଦିନ">₹4,000 / day</span>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://stimg.cardekho.com/images/car-images/large/Maruti/Ertiga/10288/1753866372177/front-left-side-47.jpg" alt="MUV">
+          <div class="body">
+            <h4 data-en="MUVs (Innova/Ertiga)" data-hi="एमयूवी (इनोवा/अर्टिगा)" data-od="ଏମ୍‌ୟୁଭି (ଇନୋଭା/ଅର୍ଟିଗା)">MUVs (Innova/Ertiga)</h4>
+            <p data-en="Capacity up to 7 passengers, great for families." data-hi="7 यात्रियों तक क्षमता, परिवारों के लिए बेहतरीन।" data-od="7 ଯାତ୍ରୀ ପର୍ଯ୍ୟନ୍ତ କ୍ଷମତା, ପରିବାର ପାଇଁ ଉତ୍ତମ।">Capacity up to 7 passengers, great for families.</p>
+            <span class="price" data-en="₹2,200 / day" data-hi="₹2,200 / दिन" data-od="₹2,200 / ଦିନ">₹2,200 / day</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h5>Travel &amp; Rent Odisha</h5>
+        <p style="color:#a7b8b3;">Your local partner for vehicle rental, tours and authentic Odisha craft — based in Bhubaneswar, serving the whole state.</p>
+        <div class="social">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">◎</a>
+          <a href="tel:+916962551917" aria-label="Call">☎</a>
+        </div>
+      </div>
+      <div>
+        <h5>Explore</h5>
+        <a href="rental.html">Vehicle Rental</a>
+        <a href="places.html">Tour Places</a>
+        <a href="packages.html">Tour Packages</a>
+        <a href="souvenirs.html">Souvenirs</a>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <a href="yatri.html">Odisha Yatri</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://www.google.com/maps/search/Odisha" target="_blank" rel="noopener">Location</a>
+      </div>
+    </div>
+    <div class="bottom">&copy; 2026 Travel &amp; Rent Odisha</div>
+  </div>
+</footer>
+
+<div class="quick-contact">
+  <a class="qc-call" href="tel:+916962551917" aria-label="Call us">📞</a>
+  <button class="qc-top" id="backToTop" aria-label="Back to top">↑</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

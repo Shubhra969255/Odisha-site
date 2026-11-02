@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Souvenirs of Odisha — Travel & Rent Odisha</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="contact-strip">
+      <a href="tel:+916962551917">📞 +91 69625 51917</a>
+      <a href="mailto:info@travelrentodisha.com">✉ info@travelrentodisha.com</a>
+    </div>
+    <div>
+      <label for="lang-selector">Language</label>
+      <select id="lang-selector" onchange="changeLanguage(this.value)">
+        <option value="en">English</option>
+        <option value="hi">हिन्दी</option>
+        <option value="od">ଓଡ଼ିଆ</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="mark">Travel &amp; Rent Odisha</span>
+      <span class="tag">Vehicles · Tours · Local Craft</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" onclick="toggleNav()" aria-label="Toggle menu">☰</button>
+    <div class="nav-wrap" id="navWrap">
+      <nav class="main">
+        <a href="index.html">Home</a>
+        <a href="rental.html">Vehicle Rental</a>
+        <a href="places.html">Tour Places</a>
+        <a href="packages.html">Tour Packages</a>
+        <a href="yatri.html">Odisha Yatri</a>
+        <a href="souvenirs.html" aria-current="page">Souvenirs</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://www.google.com/maps/search/Odisha" target="_blank" rel="noopener">Location</a>
+      </nav>
+      <a class="cart-link" href="souvenirs.html">🛍 Cart<span class="cart-badge">0</span></a>
+    </div>
+  </div>
+</header>
+
+<div class="page-banner" style="--banner-img:url('https://i.pinimg.com/236x/78/2d/a7/782da7a45a55f851c3b368da6c2cd4bc.jpg')">
+  <div class="wrap">
+    <h1 data-en="Odisha Showcase" data-hi="ओडिशा शोकेस" data-od="ଓଡ଼ିଶା ଶୋକେସ୍">Odisha Showcase</h1>
+    <p data-en="Handloom, metal craft, wood, and edible souvenirs — organised by the district that makes them." data-hi="हथकरघा, धातु शिल्प, लकड़ी, और खाद्य स्मृति चिन्ह।" data-od="ହସ୍ତତନ୍ତ, ଧାତୁ ଶିଳ୍ପ, କାଠ, ଏବଂ ଖାଦ୍ୟ ସ୍ମାରକୀ।">Handloom, metal craft, wood, and edible souvenirs — organised by the district that makes them.</p>
+  </div>
+</div>
+
+<main id="main">
+  <section>
+    <div class="wrap">
+      <div class="grid three" id="productGrid">
+
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROVLHphdx5IwRI4cVbqAVdVpts6MX14pU2ow&s" alt="Silver Filigree">
+          <div class="body">
+            <span class="tag">Metal Craft / Jewellery</span>
+            <h3>Silver Filigree (Tarakasi)</h3>
+            <p>Exquisite lace-like metal craft made from fine silver wires — jewellery, showpieces and utility items.</p>
+            <p class="district">District: Cuttack</p>
+            <span class="price">₹3,500–4,500</span>
+            <div class="card-actions"><button onclick="addToCart('Silver Filigree')">Add to Cart</button><button class="buy" onclick="buyNow('Silver Filigree')">Buy Now</button></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://i.pinimg.com/236x/78/2d/a7/782da7a45a55f851c3b368da6c2cd4bc.jpg" alt="Pattachitra Painting">
+          <div class="body">
+            <span class="tag">Painting / Art</span>
+            <h3>Pattachitra Painting</h3>
+            <p>Traditional cloth-based scroll painting with mythological themes — also masks and painted wooden toys.</p>
+            <p class="district">District: Puri (especially Raghurajpur)</p>
+            <span class="price">₹1,500–2,500</span>
+            <div class="card-actions"><button onclick="addToCart('Pattachitra Painting')">Add to Cart</button><button class="buy" onclick="buyNow('Pattachitra Painting')">Buy Now</button></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Chandua_%28Applique%29_art%29.jpg/3840px-Chandua_%28Applique%29_art%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail" alt="Appliqué Work">
+          <div class="body">
+            <span class="tag">Textile Craft / Decor</span>
+            <h3>Appliqué Work (Chandua)</h3>
+            <p>Brightly coloured fabric patches stitched into designs — lamp shades, wall hangings, umbrellas.</p>
+            <p class="district">District: Puri (especially Pipli)</p>
+            <span class="price">₹700–1,200</span>
+            <div class="card-actions"><button onclick="addToCart('Appliqué Work')">Add to Cart</button><button class="buy" onclick="buyNow('Appliqué Work')">Buy Now</button></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://priyaodisha.com/cdn/shop/products/handloom-sambalpuri-ikkat-silk-saree-handloom-sareesambalpuri-silk-priyadarshini-handloom-383311.png?v=1678726580" alt="Sambalpuri Ikat Saree">
+          <div class="body">
+            <span class="tag">Handloom / Textile</span>
+            <h3>Sambalpuri Ikat Sarees</h3>
+            <p>Globally renowned tie-and-dye handloom with intricate patterns — also stoles and dress material.</p>
+            <p class="district">District: Sambalpur, Bargarh, Subarnapur (Sonepur)</p>
+            <span class="price">₹4,000–8,000</span>
+            <div class="card-actions"><button onclick="addToCart('Sambalpuri Ikat Sarees')">Add to Cart</button><button class="buy" onclick="buyNow('Sambalpuri Ikat Sarees')">Buy Now</button></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://img-global.cpcdn.com/recipes/71ccaedc576dfd5d/1200x630cq80/photo.jpg" alt="Chhena Poda">
+          <div class="body">
+            <span class="tag">Edible Souvenir / Dessert</span>
+            <h3>Chhena Poda (Baked Cheese)</h3>
+            <p>Odisha's signature baked cheese dessert — a fresh, caramelised block to share.</p>
+            <p class="district">District: State-wide (easily found in Khordha/Bhubaneswar)</p>
+            <span class="price">₹400–600/kg</span>
+            <div class="card-actions"><button onclick="addToCart('Chhena Poda')">Add to Cart</button><button class="buy" onclick="buyNow('Chhena Poda')">Buy Now</button></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://4.imimg.com/data4/WA/PP/MY-33789287/jagannath-puri-khaja-500x500.jpg" alt="Puri Khaja">
+          <div class="body">
+            <span class="tag">Edible Souvenir / Confectionery</span>
+            <h3>Puri Khaja</h3>
+            <p>A flaky, crisp, syrup-soaked sweet, often offered as prasad at the Jagannath Temple.</p>
+            <p class="district">District: Puri</p>
+            <span class="price">₹200–300/box</span>
+            <div class="card-actions"><button onclick="addToCart('Puri Khaja')">Add to Cart</button><button class="buy" onclick="buyNow('Puri Khaja')">Buy Now</button></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://img.perniaspopupshop.com/store-locator-v2/uploads/PWA_Main_Bheranpuri_eea4f82fea.jpg" alt="Berhampuri Pata Saree">
+          <div class="body">
+            <span class="tag">Handloom / Perfume</span>
+            <h3>Berhampuri Pata &amp; Kewda Attar</h3>
+            <p>Heavy silk sarees with narrow borders, paired with aromatic kewda essence.</p>
+            <p class="district">District: Ganjam (Berhampur)</p>
+            <span class="price">₹5,000–10,000</span>
+            <div class="card-actions"><button onclick="addToCart('Berhampuri Pata')">Add to Cart</button><button class="buy" onclick="buyNow('Berhampuri Pata')">Buy Now</button></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhqoUQzlyfs9ecFiG4bhCkJkX32B0T5t0V5Q&s" alt="Tribal Jewellery">
+          <div class="body">
+            <span class="tag">Tribal Craft / Art</span>
+            <h3>Dhokra / Tribal Jewellery</h3>
+            <p>Bell-metal Dhokra art, heavy brass jewellery, and indigenous Saura wall paintings.</p>
+            <p class="district">District: Koraput / Rayagada</p>
+            <span class="price">₹1,500–3,000</span>
+            <div class="card-actions"><button onclick="addToCart('Dhokra Jewellery')">Add to Cart</button><button class="buy" onclick="buyNow('Dhokra Jewellery')">Buy Now</button></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6veYtAWYIHS_sPai93Z7kf35gqGg0qXFiXw&s" alt="Horn Work">
+          <div class="body">
+            <span class="tag">Handicraft</span>
+            <h3>Horn Work</h3>
+            <p>Combs, showpieces and small decorative animals crafted from cattle horn.</p>
+            <p class="district">District: Cuttack (Parlakhemundi in Gajapati also notable)</p>
+            <span class="price">₹800–1,500</span>
+            <div class="card-actions"><button onclick="addToCart('Horn Work')">Add to Cart</button><button class="buy" onclick="buyNow('Horn Work')">Buy Now</button></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://cdn.shopify.com/s/files/1/0677/1015/7102/files/95337f_5fb6dd50ff7b4b729dbd94f3387d5cca_mv2_480x480.webp?v=1682441112" alt="Sabai Grass Crafts">
+          <div class="body">
+            <span class="tag">Eco-Friendly Craft</span>
+            <h3>Sabai Grass Crafts</h3>
+            <p>Durable, beautifully woven baskets, mats and furniture made from sabai grass fibre.</p>
+            <p class="district">District: Mayurbhanj, Keonjhar, Balasore</p>
+            <span class="price">₹400–800</span>
+            <div class="card-actions"><button onclick="addToCart('Sabai Grass Crafts')">Add to Cart</button><button class="buy" onclick="buyNow('Sabai Grass Crafts')">Buy Now</button></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiNOYJ2DtfeuB4TI8l3FjmzbBspwz77CGfXMheu2j7OMYiqV0v89Re69fvPJT5vdNPpefDJnhzdT-eZy0YTT2zeEfkRojPgUEqHrAFducVKMQQk3V52NxhFVhCOgswUjEPXQUhAQNrb8r8/s960/864CFECB-9252-4A3D-BB5C-5185CA70CB9F.jpeg" alt="Rasabali">
+          <div class="body">
+            <span class="tag">Edible Souvenir / Sweet</span>
+            <h3>Rasabali</h3>
+            <p>Fried, flattened chhena patties soaked in thickened, cardamom-flavoured milk.</p>
+            <p class="district">District: Kendrapara</p>
+            <span class="price">₹250–400</span>
+            <div class="card-actions"><button onclick="addToCart('Rasabali')">Add to Cart</button><button class="buy" onclick="buyNow('Rasabali')">Buy Now</button></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://c9admin.cottage9.com/uploads/2102/The-Art-Of-Stone-Carving-Unveiling-The-Timeless-Craft-Frnt.jpg" alt="Stone Carving">
+          <div class="body">
+            <span class="tag">Sculpture / Craft</span>
+            <h3>Stone Carvings</h3>
+            <p>Intricate replicas of temple sculpture, the Konark wheel, and deities carved from soft stone.</p>
+            <p class="district">District: Khordha (Bhubaneswar), Puri (Konark area)</p>
+            <span class="price">₹1,000–2,000</span>
+            <div class="card-actions"><button onclick="addToCart('Stone Carvings')">Add to Cart</button><button class="buy" onclick="buyNow('Stone Carvings')">Buy Now</button></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVKq4Z5rp2VkavIxi91SFR7kdujQZZHe8jYg&s" alt="Sonepuri Silk">
+          <div class="body">
+            <span class="tag">Handloom / Textile</span>
+            <h3>Sonepuri Silk (Ikat)</h3>
+            <p>Fine silk ikat weaves featuring the traditional "bandha" technique, close cousin to Sambalpuri style.</p>
+            <p class="district">District: Subarnapur (Sonepur)</p>
+            <span class="price">₹3,500–6,000</span>
+            <div class="card-actions"><button onclick="addToCart('Sonepuri Silk')">Add to Cart</button><button class="buy" onclick="buyNow('Sonepuri Silk')">Buy Now</button></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://cdn.shopify.com/s/files/1/0444/9337/3595/files/Odisha_Handloom_That_Have_International_Fame_600x600.jpg?v=1655551634" alt="Habaspuri Handloom">
+          <div class="body">
+            <span class="tag">Textile / Rural Craft</span>
+            <h3>Habaspuri Textiles</h3>
+            <p>A major cotton-based textile known for motifs like fish and flowers — also look for paddy crafts.</p>
+            <p class="district">District: Kalahandi</p>
+            <span class="price">₹1,800–3,000</span>
+            <div class="card-actions"><button onclick="addToCart('Habaspuri Textiles')">Add to Cart</button><button class="buy" onclick="buyNow('Habaspuri Textiles')">Buy Now</button></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://www.shutterstock.com/image-photo/traditional-handmade-colorful-toys-made-260nw-2089938448.jpg" alt="Painted Wooden Toys">
+          <div class="body">
+            <span class="tag">Wooden Craft / Toy</span>
+            <h3>Painted Wooden Toys</h3>
+            <p>Colourful, handcrafted wooden toys and idols, often depicting deities and animals.</p>
+            <p class="district">District: Khordha (Bhubaneswar)</p>
+            <span class="price">₹300–500</span>
+            <div class="card-actions"><button onclick="addToCart('Painted Wooden Toys')">Add to Cart</button><button class="buy" onclick="buyNow('Painted Wooden Toys')">Buy Now</button></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://www.shambhavicreations.co.in/cdn/shop/files/LRM_EXPORT_106553940619729_20190719_134929160_1_-min_d333e2aa-657d-4169-8674-bb4af7c05201_1080x.jpg?v=1675081508" alt="Dhokra Art">
+          <div class="body">
+            <span class="tag">Metal Craft</span>
+            <h3>Dhokra Brass Art</h3>
+            <p>Non-ferrous metal casting using the lost-wax technique — tribal figurines, wall hangings, jewellery.</p>
+            <p class="district">District: Balangir, Mayurbhanj, Angul</p>
+            <span class="price">₹2,000–4,000</span>
+            <div class="card-actions"><button onclick="addToCart('Dhokra Brass Art')">Add to Cart</button><button class="buy" onclick="buyNow('Dhokra Brass Art')">Buy Now</button></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEQH2yM3H6NVKFOjvngWsIH__63qInJqOL6Q&s" alt="Kotpad Handloom">
+          <div class="body">
+            <span class="tag">Handloom / Tribal Textile</span>
+            <h3>Kotpad Handloom</h3>
+            <p>The only textile in India dyed with roots of the Aal (Indian madder) tree.</p>
+            <p class="district">District: Koraput (Kotpad)</p>
+            <span class="price">₹3,000–5,000</span>
+            <div class="card-actions"><button onclick="addToCart('Kotpad Handloom')">Add to Cart</button><button class="buy" onclick="buyNow('Kotpad Handloom')">Buy Now</button></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://www.memeraki.com/cdn/shop/files/Fluid-Elegance-The-Enchanting-Fish-of-Dhokra-Art-by-Kunal-Rana-1_800x.jpg?v=1726052599" alt="Flexible brass fish and Dokra art">
+          <div class="body">
+            <span class="tag">Metal Craft / Novelty</span>
+            <h3>Flexible Brass Fish &amp; Dokra Jewellery</h3>
+            <p>A brass fish made of moving segments, alongside intricate non-ferrous metal ornaments from tribal Mayurbhanj.</p>
+            <p class="district">District: Ganjam / Mayurbhanj</p>
+            <span class="price">₹1,000–3,500</span>
+            <div class="card-actions"><button onclick="addToCart('Flexible Brass Fish')">Add to Cart</button><button class="buy" onclick="buyNow('Flexible Brass Fish')">Buy Now</button></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h5>Travel &amp; Rent Odisha</h5>
+        <p style="color:#a7b8b3;">Your local partner for vehicle rental, tours and authentic Odisha craft — based in Bhubaneswar, serving the whole state.</p>
+        <div class="social">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">◎</a>
+          <a href="tel:+916962551917" aria-label="Call">☎</a>
+        </div>
+      </div>
+      <div>
+        <h5>Explore</h5>
+        <a href="rental.html">Vehicle Rental</a>
+        <a href="places.html">Tour Places</a>
+        <a href="packages.html">Tour Packages</a>
+        <a href="souvenirs.html">Souvenirs</a>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <a href="yatri.html">Odisha Yatri</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://www.google.com/maps/search/Odisha" target="_blank" rel="noopener">Location</a>
+      </div>
+    </div>
+    <div class="bottom">&copy; 2026 Travel &amp; Rent Odisha</div>
+  </div>
+</footer>
+
+<div class="quick-contact">
+  <a class="qc-call" href="tel:+916962551917" aria-label="Call us">📞</a>
+  <button class="qc-top" id="backToTop" aria-label="Back to top">↑</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

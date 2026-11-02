@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tour Places — Travel & Rent Odisha</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="contact-strip">
+      <a href="tel:+916962551917">📞 +91 69625 51917</a>
+      <a href="mailto:info@travelrentodisha.com">✉ info@travelrentodisha.com</a>
+    </div>
+    <div>
+      <label for="lang-selector">Language</label>
+      <select id="lang-selector" onchange="changeLanguage(this.value)">
+        <option value="en">English</option>
+        <option value="hi">हिन्दी</option>
+        <option value="od">ଓଡ଼ିଆ</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="mark">Travel &amp; Rent Odisha</span>
+      <span class="tag">Vehicles · Tours · Local Craft</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" onclick="toggleNav()" aria-label="Toggle menu">☰</button>
+    <div class="nav-wrap" id="navWrap">
+      <nav class="main">
+        <a href="index.html">Home</a>
+        <a href="rental.html">Vehicle Rental</a>
+        <a href="places.html" aria-current="page">Tour Places</a>
+        <a href="packages.html">Tour Packages</a>
+        <a href="yatri.html">Odisha Yatri</a>
+        <a href="souvenirs.html">Souvenirs</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://www.google.com/maps/search/Odisha" target="_blank" rel="noopener">Location</a>
+      </nav>
+      <a class="cart-link" href="souvenirs.html">🛍 Cart<span class="cart-badge">0</span></a>
+    </div>
+  </div>
+</header>
+
+<div class="page-banner" style="--banner-img:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM8SNMes3N3Pkfyhpk0AF2WAiuTEI8URsy4w&s')">
+  <div class="wrap">
+    <h1 data-en="21+ Destinations Across Odisha" data-hi="ओडिशा भर में 21+ गंतव्य" data-od="ଓଡ଼ିଶା ସାରା 21+ ସ୍ଥାନ">21+ Destinations Across Odisha</h1>
+    <p data-en="Mountains and wildlife, coastline and lagoons, temples and ancient monasteries — grouped so you can plan by mood." data-hi="पहाड़ और वन्यजीव, तट और लैगून, मंदिर और प्राचीन मठ — मूड के अनुसार समूहीकृत।" data-od="ପାହାଡ ଏବଂ ବନ୍ୟଜୀବ, ଉପକୂଳ ଏବଂ ଲ୍ୟାଗୁନ୍, ମନ୍ଦିର ଏବଂ ପ୍ରାଚୀନ ମଠ।">Mountains and wildlife, coastline and lagoons, temples and ancient monasteries — grouped so you can plan by mood.</p>
+  </div>
+</div>
+
+<main id="main">
+  <section>
+    <div class="wrap numbered">
+
+      <div class="filters">
+        <button class="active" onclick="filterPlaces('all', this)" data-en="All" data-hi="सभी" data-od="ସମସ୍ତ">All</button>
+        <button onclick="filterPlaces('mountain', this)" data-en="Mountains &amp; Wildlife" data-hi="पहाड़ और वन्यजीव" data-od="ପାହାଡ ଏବଂ ବନ୍ୟଜୀବ">Mountains &amp; Wildlife</button>
+        <button onclick="filterPlaces('beach', this)" data-en="Beaches &amp; Lagoons" data-hi="समुद्र तट और लैगून" data-od="ବେଳାଭୂମି ଏବଂ ଲ୍ୟାଗୁନ୍">Beaches &amp; Lagoons</button>
+        <button onclick="filterPlaces('historical', this)" data-en="Temples &amp; History" data-hi="मंदिर और इतिहास" data-od="ମନ୍ଦିର ଏବଂ ଇତିହାସ">Temples &amp; History</button>
+      </div>
+
+      <div class="filter-group" data-category="mountain">
+      <h3 class="subhead" data-en="Mountains, Waterfalls & Wildlife" data-hi="पहाड़, झरने और वन्यजीव" data-od="ପାହାଡ, ଜଳପ୍ରପାତ ଏବଂ ବନ୍ୟଜୀବ">Mountains, Waterfalls & Wildlife</h3>
+      <div class="grid three">
+        <div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQD53KOnqJgIJU5Ni6MOg35it-si8DII_6HA&s" alt="Deomali Hills"><div class="body"><h4 data-en="Deomali Hills (Koraput)" data-hi="देवमाली हिल्स (कोरापुट)" data-od="ଦେଓମାଳି ପାହାଡ (କୋରାପୁଟ)">Deomali Hills (Koraput)</h4><p>Odisha's highest peak, offering panoramic tribal and natural views.</p></div></div>
+        <div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuv3oUUQvt-2qWQ6KStD5K1VVt1W1LX_QM_Q&s" alt="Daringbadi"><div class="body"><h4 data-en="Daringbadi (Kandhamal)" data-hi="दारिंगबाड़ी (कंधमाल)" data-od="ଦାରିଙ୍ଗବାଡି (କନ୍ଧମାଳ)">Daringbadi (Kandhamal)</h4><p>Known as the "Kashmir of Odisha" for its pine forests and cool climate.</p></div></div>
+        <div class="card"><img src="https://static2.tripoto.com/media/filter/tst/img/2015995/TripDocument/1614438749_2019_09_14_13_00.jpg" alt="Mahendragiri"><div class="body"><h4 data-en="Mahendragiri (Gajapati)" data-hi="महेंद्रगिरि (गजपति)" data-od="ମହେନ୍ଦ୍ରଗିରି (ଗଜପତି)">Mahendragiri (Gajapati)</h4><p>Second-highest peak, steeped in mythology, ideal for trekking.</p></div></div>
+        <div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVP7_WaA550bua9QI1l5YrMD5NDDV3Quj5Rw&s" alt="Barehipani Falls"><div class="body"><h4 data-en="Barehipani Falls (Similipal)" data-hi="बारेहिपानी जलप्रपात" data-od="ବାରେହିପାଣି ଜଳପ୍ରପାତ">Barehipani Falls (Similipal)</h4><p>Spectacular two-tiered waterfall in the core of Similipal National Park.</p></div></div>
+        <div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnX2pJqr2t9kx8p9o-jIKmDSgW6pTn0lZU1w&s" alt="Khandadhar Falls"><div class="body"><h4 data-en="Khandadhar Falls (Sundargarh)" data-hi="खंडाधार जलप्रपात" data-od="ଖଣ୍ଡାଧାର ଜଳପ୍ରପାତ">Khandadhar Falls (Sundargarh)</h4><p>Odisha's second-highest waterfall, known for its natural pool.</p></div></div>
+        <div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYWvFsYQjiFKXze14LXxC8frVTEnwTztqUbA&s" alt="Koraput valley"><div class="body"><h4 data-en="Koraput & Tribal Museum" data-hi="कोरापुट और जनजातीय संग्रहालय" data-od="କୋରାପୁଟ ଏବଂ ଆଦିବାସୀ ସଂଗ୍ରହାଳୟ">Koraput & Tribal Museum</h4><p>Centre of tribal culture and lush green valleys in southern Odisha.</p></div></div>
+        <div class="card"><img src="https://s7ap1.scene7.com/is/image/incredibleindia/satkosia-gorge-wildlife-sanctuary-bhubaneshwar-odisha-2-attr-hero?qlt=82&ts=1742156610865" alt="Satkosia Gorge"><div class="body"><h4 data-en="Satkosia Gorge & Tiger Reserve" data-hi="सतकोसिया गॉर्ज और टाइगर रिजर्व" data-od="ସାତକୋସିଆ ଗର୍ଜ ଏବଂ ଟାଇଗର ରିଜର୍ଭ">Satkosia Gorge & Tiger Reserve</h4><p>The Mahanadi cutting through the Eastern Ghats — gharials and eco-tourism.</p></div></div>
+        <div class="card"><img src="https://odishatourism.gov.in/documents/35730/56026/north-od-Similipal-National-Park-banner.webp/b84fa730-74c2-658e-e3a5-51278212f006?version=1.0&t=1790787496802" alt="Similipal National Park"><div class="body"><h4 data-en="Similipal National Park (Mayurbhanj)" data-hi="सिमलीपाल राष्ट्रीय उद्यान" data-od="ଶିମିଳିପାଳ ଜାତୀୟ ଉଦ୍ୟାନ">Similipal National Park (Mayurbhanj)</h4><p>Major tiger and biosphere reserve, host to beautiful waterfalls.</p></div></div>
+      </div>
+      </div>
+
+      <div class="filter-group" data-category="beach">
+      <h3 class="subhead" data-en="Coastal Beaches & Lagoons" data-hi="तटीय समुद्र तट और लैगून" data-od="ଉପକୂଳ ବେଳାଭୂମି ଏବଂ ଲ୍ୟାଗୁନ୍">Coastal Beaches & Lagoons</h3>
+      <div class="grid three">
+        <div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1Mu9pclVMqShqRVO05jFwewt1lsa3SQXoaQ&s" alt="Puri Beach"><div class="body"><h4 data-en="Puri Beach (Golden Beach)" data-hi="पुरी बीच (गोल्डन बीच)" data-od="ପୁରୀ ବେଳାଭୂମି (ଗୋଲ୍ଡେନ୍ ବେଳାଭୂମି)">Puri Beach (Golden Beach)</h4><p>Blue Flag certified beach, renowned for sand art and serenity.</p></div></div>
+        <div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeTar0O4SpvVc5ahuZRX3GSTqVznMyCyK_HA&s" alt="Chilika Lake"><div class="body"><h4 data-en="Chilika Lake (Largest Lagoon)" data-hi="चिल्का झील" data-od="ଚିଲିକା ହ୍ରଦ">Chilika Lake (Largest Lagoon)</h4><p>Asia's largest brackish lagoon — migratory birds and Irrawaddy dolphins.</p></div></div>
+        <div class="card"><img src="https://travelmynation.in/wp-content/uploads/2020/06/Blog.Railyatri.png" alt="Chandipur Beach"><div class="body"><h4 data-en="Chandipur Beach (Balasore)" data-hi="चांदीपुर बीच" data-od="ଚାନ୍ଦିପୁର ବେଳାଭୂମି">Chandipur Beach (Balasore)</h4><p>The "vanishing sea" — water recedes up to 5 km at low tide.</p></div></div>
+        <div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoUAS58VZhbtTz-4hHmPgF0697Jboerlx3-zWYFHFiLZvBBcyPvgGFR9Pl&s=10" alt="Talasari Beach"><div class="body"><h4 data-en="Talasari Beach (Balasore)" data-hi="तलासरी बीच" data-od="ତାଳସାରି ବେଳାଭୂମି">Talasari Beach (Balasore)</h4><p>Scenic beach known for red crabs and palms, near the Subarnarekha estuary.</p></div></div>
+        <div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLOeRkCsu0QFmkTvLBu6AjwJeHvHN45Swmlg&s" alt="Gopalpur Beach"><div class="body"><h4 data-en="Gopalpur-on-Sea (Ganjam)" data-hi="गोपालपुर-ऑन-सी" data-od="ଗୋପାଳପୁର-ଅନ୍-ସି">Gopalpur-on-Sea (Ganjam)</h4><p>Historic port town with a serene beach and a major lighthouse.</p></div></div>
+        <div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaxtpwBTUGaZxi6C-fx-2A99hCkfASCfGNEg&s" alt="Bhitarkanika"><div class="body"><h4 data-en="Bhitarkanika National Park" data-hi="भितरकनिका राष्ट्रीय उद्यान" data-od="ଭିତରକନିକା ଜାତୀୟ ଉଦ୍ୟାନ">Bhitarkanika National Park</h4><p>Largest population of saltwater crocodiles and mangrove forests.</p></div></div>
+        <div class="card"><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/9b/65/7b/sunrise-view-awesome.jpg?w=1200&h=1200&s=1" alt="Chandrabhaga Beach"><div class="body"><h4 data-en="Chandrabhaga Beach (Konark)" data-hi="चंद्रभागा बीच" data-od="ଚନ୍ଦ୍ରଭାଗା ବେଳାଭୂମି">Chandrabhaga Beach (Konark)</h4><p>Stunning sunrises, close to the Sun Temple.</p></div></div>
+      </div>
+      </div>
+
+      <div class="filter-group" data-category="historical">
+      <h3 class="subhead" data-en="Ancient, Religious & Historical Sites" data-hi="प्राचीन, धार्मिक और ऐतिहासिक स्थल" data-od="ପ୍ରାଚୀନ, ଧାର୍ମିକ ଏବଂ ଐତିହାସିକ ସ୍ଥାନ">Ancient, Religious & Historical Sites</h3>
+      <div class="grid three">
+        <div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM8SNMes3N3Pkfyhpk0AF2WAiuTEI8URsy4w&s" alt="Konark Sun Temple"><div class="body"><h4 data-en="Konark Sun Temple" data-hi="कोणार्क सूर्य मंदिर" data-od="କୋଣାର୍କ ସୂର୍ଯ୍ୟ ମନ୍ଦିର">Konark Sun Temple</h4><p>UNESCO World Heritage Site — 13th-century chariot temple architecture.</p></div></div>
+        <div class="card"><img src="https://s7ap1.scene7.com/is/image/incredibleindia/lingaraj-temple-bhubaneshwar-odisha-2-attr-hero?qlt=82&ts=1742165154990" alt="Lingaraj Temple"><div class="body"><h4 data-en="Lingaraj Temple (Bhubaneswar)" data-hi="लिंगराज मंदिर" data-od="ଲିଙ୍ଗରାଜ ମନ୍ଦିର">Lingaraj Temple (Bhubaneswar)</h4><p>One of the oldest and largest temples dedicated to Lord Shiva.</p></div></div>
+        <div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzgRW3j5xWl2IYFInwPUVMQVycGBgQn76WOA&s" alt="Dhauli Shanti Stupa"><div class="body"><h4 data-en="Dhauli Shanti Stupa" data-hi="धौली शांति स्तूप" data-od="ଧଉଳି ଶାନ୍ତି ସ୍ତୁପ">Dhauli Shanti Stupa</h4><p>Buddhist peace pagoda over the ancient Kalinga War battleground.</p></div></div>
+        <div class="card"><img src="https://media-cdn.tripadvisor.com/media/photo-p/1b/cc/b1/6a/panchalingeshwar-temple.jpg" alt="Panchalingeswar Temple"><div class="body"><h4 data-en="Panchalingeswar Temple (Balasore)" data-hi="पंचलिंगेश्वर मंदिर" data-od="ପଞ୍ଚଲିଙ୍ଗେଶ୍ୱର ମନ୍ଦିର">Panchalingeswar Temple (Balasore)</h4><p>Hilltop Shiva temple where five Shivalingas are bathed by a natural stream.</p></div></div>
+        <div class="card"><img src="https://s7ap1.scene7.com/is/image/incredibleindia/2-khandagiri-udaigiri-caves-attr-hero?qlt=82&ts=1742184745784" alt="Khandagiri Caves"><div class="body"><h4 data-en="Khandagiri & Udayagiri Caves" data-hi="खंडगिरि और उदयगिरि गुफाएँ" data-od="ଖଣ୍ଡଗିରି ଏବଂ ଉଦୟଗିରି ଗୁମ୍ଫା">Khandagiri & Udayagiri Caves</h4><p>Ancient Jain rock-cut shelters dating to the 2nd century BCE.</p></div></div>
+        <div class="card"><img src="https://d18x2uyjeekruj.cloudfront.net/wp-content/uploads/2025/02/ratna.jpg" alt="Ratnagiri Buddhist Complex"><div class="body"><h4 data-en="Ratnagiri, Lalitgiri & Udayagiri" data-hi="रत्नागिरी, ललितगिरि और उदयगिरि" data-od="ରତ୍ନଗିରି, ଲଳିତଗିରି ଏବଂ ଉଦୟଗିରି">Ratnagiri, Lalitgiri & Udayagiri</h4><p>The "Diamond Triangle" — ancient Buddhist monasteries and stupas.</p></div></div>
+      </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h5>Travel &amp; Rent Odisha</h5>
+        <p style="color:#a7b8b3;">Your local partner for vehicle rental, tours and authentic Odisha craft — based in Bhubaneswar, serving the whole state.</p>
+        <div class="social">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">◎</a>
+          <a href="tel:+916962551917" aria-label="Call">☎</a>
+        </div>
+      </div>
+      <div>
+        <h5>Explore</h5>
+        <a href="rental.html">Vehicle Rental</a>
+        <a href="places.html">Tour Places</a>
+        <a href="packages.html">Tour Packages</a>
+        <a href="souvenirs.html">Souvenirs</a>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <a href="yatri.html">Odisha Yatri</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://www.google.com/maps/search/Odisha" target="_blank" rel="noopener">Location</a>
+      </div>
+    </div>
+    <div class="bottom">&copy; 2026 Travel &amp; Rent Odisha</div>
+  </div>
+</footer>
+
+<div class="quick-contact">
+  <a class="qc-call" href="tel:+916962551917" aria-label="Call us">📞</a>
+  <button class="qc-top" id="backToTop" aria-label="Back to top">↑</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
